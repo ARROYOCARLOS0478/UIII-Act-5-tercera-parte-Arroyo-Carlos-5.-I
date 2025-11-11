@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #007bff;"> 
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'inicio' %}">
+            <i class="bi bi-gear-fill"></i> Sistema de Administración BYD 
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle active" href="{% url 'inicio' %}"> 
+                        <i class="bi bi-house-door-fill"></i> Inicio
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-truck"></i> Proveedor
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'agregar_proveedor' %}">Agregar Proveedor</a></li>
+                        <li><a class="dropdown-item" href="{% url 'ver_proveedores' %}">Ver Proveedores</a></li>
+                        <li><a class="dropdown-item disabled" href="#">Actualizar Proveedor</a></li>
+                        <li><a class="dropdown-item disabled" href="#">Borrar Proveedor</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-box-seam"></i> Distribuidor
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'agregar_distribuidor' %}">Agregar Distribuidor</a></li>
+                        <li><a class="dropdown-item" href="{% url 'ver_distribuidores' %}">Ver Distribuidores</a></li>
+                        <li><a class="dropdown-item disabled" href="#">Actualizar Distribuidor</a></li> {# Usaremos Ver/Editar #}
+                        <li><a class="dropdown-item disabled" href="#">Borrar Distribuidor</a></li> {# Usaremos Ver/Borrar #}
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-box-fill"></i> Producto
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'agregar_producto' %}">Agregar Producto</a></li>
+                        <li><a class="dropdown-item" href="{% url 'ver_productos' %}">Ver Productos</a></li>
+                        <li><a class="dropdown-item disabled" href="#">Actualizar Producto</a></li>
+                        <li><a class="dropdown-item disabled" href="#">Borrar Producto</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</nav>
